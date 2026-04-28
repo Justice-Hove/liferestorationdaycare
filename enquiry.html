@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Enquire about enrollment or donate to Life Restoration Day Care.">
+    <title>Enquiry | Life Restoration Day Care</title>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="enquiry.html">Enquiry</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="welcome-heading">
+            <h1>Enquiry & Donations</h1>
+            <p>
+                We welcome all questions regarding student enrollment, after-school support, 
+                and community volunteering. If you wish to support our NPO financially, 
+                please select "Donate" below.
+            </p>
+        </section>
+
+        <hr>
+
+        <section id="enquiry-form-section">
+            <form action="#" method="post">
+                
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="name" placeholder="First Name" required>
+                    <br><br>
+
+                    <label for="surname">Surname:</label><br>
+                    <input type="text" id="surname" name="surname" placeholder="Last Name" required>
+                    <br><br>
+
+                    <label for="cell">Cell:</label><br>
+                    <input type="tel" id="cell" name="cell" placeholder="073 123 4567" required>
+                    <br><br>
+
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+                    <br><br>
+                </fieldset>
+
+                <br>
+
+                <fieldset>
+                    <legend>Enquiry Details</legend>
+
+                    <label for="purpose">Purpose (Dropdown Menu):</label><br>
+                    <select id="purpose" name="purpose" required>
+                        <option value="" disabled selected>-- Select Purpose --</option>
+                        <option value="enrollment">Student Enrollment</option>
+                        <option value="donate">Donate / Sponsor</option>
+                        <option value="volunteer">Volunteer</option>
+                        <option value="general">General Question</option>
+                    </select>
+                    <br><br>
+
+                    <label for="card">Card Number (If DONATE is selected on purpose dropdown):</label><br>
+                    <input type="text" id="card" name="card" placeholder="1234 5678 9101 1121">
+                    <br><br>
+
+                    <label for="enquiry_text">Enquiry Text (Additional Information):</label><br>
+                    <textarea id="enquiry_text" name="enquiry_text" rows="8" cols="60" placeholder="Please type your message or additional details here..." required></textarea>
+                    <br><br>
+                </fieldset>
+
+                <br>
+
+                <div>
+                    <button type="submit" name="action" value="enquire">ENQUIRE</button>
+                    &nbsp;&nbsp;&nbsp;
+                    <button type="submit" name="action" value="donate">DONATE (When selected Donate)</button>
+                </div>
+
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <hr>
+        <p>384 Makakatela Village &nbsp;|&nbsp; Ga Masha &nbsp;|&nbsp; Ngwaabe 1058</p>
+        <p>Tel: 073 684 3338 &nbsp;|&nbsp; Email: liferestoration337@gmail.com</p>
+        <p>NPC Reg: 2023/873650/08 &nbsp;|&nbsp; NPO Reg No: 298-965</p>
+        <p><small>&copy; 2026 Life Restoration Day Care. All rights reserved.</small></p>
+    </footer>
+
+</body>
+</html>
