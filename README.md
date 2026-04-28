@@ -85,3 +85,15 @@ v1.3
 Changed images from:
 index.html
 services.html
+
+## References
+
+Afrihost, 2026. Domains. [Online]. Available at: https://www.afrihost.com/domains. [Accessed on 10 April 2026].
+
+ColorHunt, n.d. Color Palettes for Designers and Artists. [Online]. Available at: https://colorhunt.co. [Accessed on 28 April 2026].
+
+FreePik, n.d. Images. [Online]. Available at: https://www.freepik.com. [Accessed on 28 April 2026].
+
+Google Font, n.d. Free Fonts Library. [Online]. Available at: https://fonts.google.com. [Accessed on 9 April 2026].
+
+W3Schools, 2026 HTML Introduction. [Online]. Available at: https://www.w3schools.com/html/html_intro.asp [Accessed: 28 April 2026].
