@@ -86,6 +86,14 @@ Changed images from:
 index.html
 services.html
 
+21/05/2026
+v1.4
+Created a style.css file
+Added code to the external style sheet
+linked the style sheet to all the pages
+Added responsive adjustments for h1 for the font to look presentable on the mobile phone
+
+
 ## References
 
 Afrihost, 2026. Domains. [Online]. Available at: https://www.afrihost.com/domains. [Accessed on 10 April 2026].
