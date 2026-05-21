@@ -92,7 +92,11 @@ Created a style.css file
 Added code to the external style sheet
 linked the style sheet to all the pages
 Added responsive adjustments for h1 for the font to look presentable on the mobile phone
+Changed the proposed colours due to low text visibility 
+(Main bg = Green, Head & footer bg = blue)
+(Font Colors = Orange, black, white )
 
+22/05/2026
 
 ## References
 
