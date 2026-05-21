@@ -97,7 +97,12 @@ Changed the proposed colours due to low text visibility
 (Font Colors = Orange, black, white )
 
 22/05/2026
-
+Changed width of images in services,html to 100
+Switched the table section and video gallery to match the wire frames
+created and linked swrvice card hover feature from style.css to services.html
+created sevice card for image with white background
+Created a 2x2 grid for activity images 
+created table atributes in the external style sheet and linked the table
 ## References
 
 Afrihost, 2026. Domains. [Online]. Available at: https://www.afrihost.com/domains. [Accessed on 10 April 2026].

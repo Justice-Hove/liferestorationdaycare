@@ -56,6 +56,22 @@ h2 {
     font-size: 2rem;
 }
 
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #0d1b2a; /* Dark Blue */
+    color: #ffffff;
+    font-size: 0.9em;
+}
+
+@media (max-width: 600px) {
+    h1 { font-size: 2rem; }
+}
+
+
+/*About Us Page Enhancements */
 /* Staff Grid */
 #staff-grid {
     display: grid;
@@ -71,16 +87,59 @@ h2 {
     border-radius: 5px;
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    margin-top: 40px;
-    padding: 20px;
-    background-color: #0d1b2a; /* Dark Blue */
-    color: #ffffff;
-    font-size: 0.9em;
+
+
+/* --- Services Page Enhancements --- */
+
+/* Updated Grid for Cards */
+#activities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
 }
 
-@media (max-width: 600px) {
-    h1 { font-size: 2rem; }
+/* Service Card Styles */
+.service-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #f0f0f0;
+    height: 90%;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.service-card img {
+    width: 100%;
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover; /* Keeps aspect ratio */
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    margin: 10px 0;
+    color: #2d5a27; /* Use your Forest Green theme color */
+}
+
+/* Container for the 2x2 grid */
+/* #activities-grid rule merged above */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 20px 0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th {
+    background-color: #0d1b2a;
+    color: white;
 }
