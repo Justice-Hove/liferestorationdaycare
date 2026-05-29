@@ -97,12 +97,33 @@ Changed the proposed colours due to low text visibility
 (Font Colors = Orange, black, white )
 
 22/05/2026
+v1.5
 Changed width of images in services,html to 100
 Switched the table section and video gallery to match the wire frames
 created and linked swrvice card hover feature from style.css to services.html
 created sevice card for image with white background
 Created a 2x2 grid for activity images 
 created table atributes in the external style sheet and linked the table
+
+23/05/2026
+v1.6
+Added video designs to style.css
+Linked videos on services.html to style sheets on style.css
+updated comments on style.css to be understandable
+Increased h1 and h2 font size
+
+24/05/2026
+v1.7
+improved layout structure for the index.html
+Added a logo in the navigation bar
+Shifted the enquirery link on the index.html and added it to the image to match wireframes.
+Made a button for the enquire link
+Improved the responsive design for headings texts images on style.css
+Added adjustments to navigation menu to adapt in all screen sizes
+
+26/05/2026
+v1.8
+
 ## References
 
 Afrihost, 2026. Domains. [Online]. Available at: https://www.afrihost.com/domains. [Accessed on 10 April 2026].

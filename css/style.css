@@ -8,12 +8,64 @@ body {
     background-color: #2d5a27
 }
 
+
 /* Header & Navigation */ 
 header {
     background-color: #0d1b2a; /* Dark Blue */
     color: #e67e22;            /* Orange Font Color */
     padding: 1.5rem 0;
 }
+
+.header-container {
+    display: flex;
+    justify-content: center; 
+    gap: 60px;
+    align-items: center;            
+    padding: 0 40px;                
+    max-width: 1200px;             
+    width: 100%;                    
+    box-sizing: border-box;        
+    margin: 0 auto;                
+}
+
+.header-logo {
+    height: 80px;                   
+    width: auto;                   
+    display: block;
+}
+
+
+.header-container nav ul {
+    display: flex;
+    gap: 25px;                    
+    list-style: none;               
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the text links */
+.header-container nav ul li a {
+    color: #e67e22;                
+    text-decoration: none;          
+    font-weight: bold;
+    white-space: nowrap;            
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;   
+        gap: 20px;                 
+        padding: 0 20px;
+    }
+    
+    .header-container nav ul {
+        flex-direction: column;    
+        align-items: center;
+        gap: 15px;
+    }
+}
+
 
 nav ul {
     list-style: none;
@@ -44,16 +96,26 @@ main {
 /* Headings Font: Fredoka */
 h1, h2, h3 {
     font-family: 'Fredoka', sans-serif;
-    color: #e67e22; /* Warm Accent */
+    color: #e67e22;
+    line-height: 1.2; /* Prevents large text overlapping when it wraps */
 }
 
-/* Increased h1 size */
+/* Fluid h1: Scales from 2.5rem on mobile device and desktop */
 h1 {
-    font-size: 4rem; 
+    font-size: clamp(2.5rem, 5vw + 1.5rem, 4rem); 
+    margin-bottom: 1.5rem;
 }
 
+/* Fluid h2: Scales from 2rem on mobile up to 3rem on desktop */
 h2 {
-    font-size: 3rem;
+    font-size: clamp(2rem, 4vw + 1rem, 3rem);
+    margin-bottom: 1.2rem;
+}
+
+/* Fluid h3 for subheadings */
+h3 {
+    font-size: clamp(1.5rem, 2vw + 1rem, 2rem);
+    margin-bottom: 1rem;
 }
 
 /* Footer */
@@ -71,6 +133,66 @@ footer {
 }
 
 
+
+
+/*
+--- Index Page Enhancements ---*/
+/* 3-Column Grid for Index Page */
+#index-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+
+#hero-section {
+    background-image: url('../img/hero.jpg'); /* Image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 500px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+    width: 100%;
+    border-radius: 12px;
+}
+
+/* Mobile Devices (Screens smaller than 768px) */
+@media (max-width: 768px) {
+    #hero-section {
+        height: 300px; /* Reduces the height so the image scales well on phones */
+    }
+}
+
+
+
+.enquire-button {
+    position: absolute; /* Takes the button out of normal flow */
+    bottom: 50px;       /* Distance from the bottom of the hero */
+    left: 15%;     
+    transform: translateX(-50%);
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #ff020e; 
+    color: #0d1b2a;         
+    text-decoration: none;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.enquire-button:hover {
+    background-color: #201258d4;
+    color: white;
+}
+
+
+
 /*About Us Page Enhancements */
 /* Staff Grid */
 #staff-grid {
@@ -86,6 +208,8 @@ footer {
     text-align: center;
     border-radius: 5px;
 }
+
+
 
 
 
@@ -117,7 +241,7 @@ footer {
 
 .service-card img {
     width: 100%;
-    height: 200px; /* Fixed height for consistency */
+    height: 200px; 
     object-fit: cover; /* Keeps aspect ratio */
     border-radius: 8px;
     margin-bottom: 15px;
