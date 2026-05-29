@@ -123,6 +123,41 @@ Added adjustments to navigation menu to adapt in all screen sizes
 
 26/05/2026
 v1.8
+Added external styles in style.css for the about page
+Linked styles to the about.html.
+Added grids for images
+Added hover effects for images and a shdow.
+
+28/05/2026
+v1.9
+Added external styles in style.css for the Enquirery page
+Organised elements to look decorative
+Applied visual styles 
+Created a layout structure
+
+28/05/2026
+v2.0
+Added external styles in style.css for the Contact page
+Applied visual styles
+Linked the styles using internal css
+
+29/05/2026
+v2.1
+Checked Responsive design,
+Testing the website implemantation on multiple devices
+Attatching evidence of how the website looks on different gadgets
+Crosschecking the code and launching the website on different browsers
+
+# Responsive Design on different screens
+![](<Screenshot 2026-05-29 231003.png>)
+On the PC
+
+![alt text](<Screenshot 2026-05-29 231117.png>)
+On a tablet
+
+![alt text](<Screenshot 2026-05-29 231141.png>)
+On a mobile device
+
 
 ## References
 
@@ -135,3 +170,7 @@ FreePik, n.d. Images. [Online]. Available at: https://www.freepik.com. [Accessed
 Google Font, n.d. Free Fonts Library. [Online]. Available at: https://fonts.google.com. [Accessed on 9 April 2026].
 
 W3Schools, 2026 HTML Introduction. [Online]. Available at: https://www.w3schools.com/html/html_intro.asp [Accessed: 28 April 2026].
+
+Cssreference.io, n.d. CSS Reference: A free visual guide to CSS. . [Online]. Available at: https://cssreference.io.[Acessed on 23 May 2026].
+
+web.dev, 2026. Learn CSS. [online] Available at: <https://web.dev/learn/css> [Accessed 29 May 2026]
