@@ -183,6 +183,10 @@ Created robots.txt
 Created sitemap.xml (all 5 pages)
 Added `aria-label` and `scope` attributes for accessibility
 
+19/06/2026
+v3.5
+Added embedded Google Maps `<iframe>` to contact.html (second location)
+Updated README.md with Part 3 details, changelog and references
 
 # Responsive Design on different screens
 ![](<Screenshot 2026-05-29 231003.png>)
