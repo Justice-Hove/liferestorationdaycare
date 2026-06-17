@@ -165,6 +165,12 @@ Implemented full client-side form validation on contact.html (JS regex)
 Integrated EmailJS SDK — both forms POST to liferestoration337@gmail.com
 Updated <head> on all pages
 
+17/06/2026
+Integrated EmailJS SDK — both forms POST to liferestoration337@gmail.com
+Added dynamic card number field on enquiry.html (JS `addEventListener change`)
+Added Nedbank bank account details to enquiry.html inside `<details>` element
+Built image lightbox on services.html with prev/next/keyboard navigation (JS)
+
 # Responsive Design on different screens
 ![](<Screenshot 2026-05-29 231003.png>)
 On the PC
