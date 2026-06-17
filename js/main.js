@@ -98,3 +98,151 @@ document.addEventListener('DOMContentLoaded', function () {
             el.classList.add('fade-in-visible');
         });
     }
+
+    
+    /* ENQUIRY FORM VALIDATION + EMAILJS*/
+    const enquiryForm = document.querySelector('#enquiry-form-section form');
+    if (enquiryForm) {
+        // Toggle card field visibility based on purpose selection
+        const purposeSelect = document.getElementById('purpose');
+        const cardGroup = document.getElementById('card-group');
+        const donateBtn = document.querySelector('button[value="donate"]');
+
+        if (purposeSelect && cardGroup) {
+            cardGroup.style.display = 'none'; // hidden by default
+            if (donateBtn) donateBtn.style.display = 'none';
+
+            purposeSelect.addEventListener('change', function () {
+                if (this.value === 'donate') {
+                    cardGroup.style.display = 'block';
+                    if (donateBtn) donateBtn.style.display = 'inline-block';
+                } else {
+                    cardGroup.style.display = 'none';
+                    if (donateBtn) donateBtn.style.display = 'none';
+                }
+            });
+        }
+
+        // Form submission
+        enquiryForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            if (!validateEnquiryForm()) return;
+
+            const submitBtn = enquiryForm.querySelector('button[value="enquire"]');
+            const originalText = submitBtn ? submitBtn.textContent : 'ENQUIRE';
+            if (submitBtn) {
+                submitBtn.textContent = 'Sending…';
+                submitBtn.disabled = true;
+            }
+
+            const formData = {
+                from_name: document.getElementById('name').value.trim() + ' ' + document.getElementById('surname').value.trim(),
+                from_cell: document.getElementById('cell').value.trim(),
+                from_email: document.getElementById('email').value.trim(),
+                purpose: document.getElementById('purpose').value,
+                card_number: document.getElementById('card') ? document.getElementById('card').value.trim() : 'N/A',
+                message: document.getElementById('enquiry_text').value.trim(),
+                to_email: 'liferestoration337@gmail.com'
+            };
+
+            // EmailJS send
+            emailjs.send('service_liferestoration', 'template_enquiry', formData)
+                .then(function () {
+                    showFormMessage(enquiryForm, 'success', '✅ Thank you! Your enquiry has been sent successfully. We will be in touch shortly.');
+                    enquiryForm.reset();
+                    if (cardGroup) cardGroup.style.display = 'none';
+                    if (donateBtn) donateBtn.style.display = 'none';
+                })
+                .catch(function (error) {
+                    console.error('EmailJS error:', error);
+                    showFormMessage(enquiryForm, 'error', '❌ Sorry, something went wrong. Please email us directly at liferestoration337@gmail.com');
+                })
+                .finally(function () {
+                    if (submitBtn) {
+                        submitBtn.textContent = originalText;
+                        submitBtn.disabled = false;
+                    }
+                });
+        });
+
+        // Donate button handler
+        if (donateBtn) {
+            donateBtn.addEventListener('click', function (e) {
+                e.preventDefault();
+                if (!validateEnquiryForm()) return;
+
+                const cardValue = document.getElementById('card') ? document.getElementById('card').value.trim() : '';
+                if (!cardValue) {
+                    showFieldError('card', 'Please enter your card number to donate.');
+                    return;
+                }
+
+                const donateData = {
+                    from_name: document.getElementById('name').value.trim() + ' ' + document.getElementById('surname').value.trim(),
+                    from_cell: document.getElementById('cell').value.trim(),
+                    from_email: document.getElementById('email').value.trim(),
+                    purpose: 'DONATION',
+                    card_number: cardValue,
+                    message: document.getElementById('enquiry_text').value.trim(),
+                    to_email: 'liferestoration337@gmail.com'
+                };
+
+                donateBtn.textContent = 'Processing…';
+                donateBtn.disabled = true;
+
+                emailjs.send('service_liferestoration', 'template_enquiry', donateData)
+                    .then(function () {
+                        showFormMessage(enquiryForm, 'success', '💚 Thank you for your generous donation! We will process your payment and contact you shortly.');
+                        enquiryForm.reset();
+                    })
+                    .catch(function () {
+                        showFormMessage(enquiryForm, 'error', '❌ Donation submission failed. Please email us at liferestoration337@gmail.com');
+                    })
+                    .finally(function () {
+                        donateBtn.textContent = 'DONATE (When selected Donate)';
+                        donateBtn.disabled = false;
+                    });
+            });
+        }
+    }
+
+    /*  CONTACT FORM VALIDATION + EMAILJS */
+    const contactForm = document.querySelector('#contact-form-section form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            if (!validateContactForm()) return;
+
+            const submitBtn = contactForm.querySelector('.btn-submit');
+            if (submitBtn) {
+                submitBtn.textContent = 'Sending…';
+                submitBtn.disabled = true;
+            }
+
+            const contactData = {
+                from_name: document.getElementById('fullName').value.trim(),
+                from_email: document.getElementById('contactEmail').value.trim(),
+                message_type: document.getElementById('messageType').value,
+                message: document.getElementById('fullMessage').value.trim(),
+                to_email: 'liferestoration337@gmail.com'
+            };
+
+            emailjs.send('service_liferestoration', 'template_contact', contactData)
+                .then(function () {
+                    showFormMessage(contactForm, 'success', '✅ Message sent! We will respond within 1–2 business days.');
+                    contactForm.reset();
+                })
+                .catch(function (error) {
+                    console.error('EmailJS error:', error);
+                    showFormMessage(contactForm, 'error', '❌ Message failed to send. Please email us at liferestoration337@gmail.com');
+                })
+                .finally(function () {
+                    if (submitBtn) {
+                        submitBtn.textContent = 'Send Message';
+                        submitBtn.disabled = false;
+                    }
+                });
+        });
+    }

@@ -3,11 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact Life Restoration Day Care. View our operating hours, locations, and send us a direct message.">
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Contact Us | Life Restoration Day Care">
+    <meta property="og:description" content="Get in touch with Life Restoration Day Care — contact details, operating hours and message form.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://liferestorationdaycare.netlify.app/contact.html">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://liferestorationdaycare.netlify.app/contact.html">
+
+    <!-- Fonts & Stylesheet -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        (function () { emailjs.init({ publicKey: 'YOUR_EMAILJS_PUBLIC_KEY' }); })();
+    </script>
 
    <!--Page title-->
     <title>Contact Us | Life Restoration Day Care</title>

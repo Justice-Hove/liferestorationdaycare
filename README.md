@@ -159,6 +159,11 @@ Added animated stats counter strip to index.html (JS `setInterval`)
 15/06/2026
 Added cookie consent banner with localStorage (JS)
 
+16/06/2026
+Implemented full client-side form validation on enquiry.html (JS regex)
+Implemented full client-side form validation on contact.html (JS regex)
+Integrated EmailJS SDK — both forms POST to liferestoration337@gmail.com
+Updated <head> on all pages
 
 # Responsive Design on different screens
 ![](<Screenshot 2026-05-29 231003.png>)
