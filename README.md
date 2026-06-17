@@ -157,19 +157,32 @@ Added scroll-to-top button (JS — `window.scroll`, `classList.toggle`)
 Added animated stats counter strip to index.html (JS `setInterval`)
 
 15/06/2026
+v3.1
 Added cookie consent banner with localStorage (JS)
 
 16/06/2026
+v3.2
 Implemented full client-side form validation on enquiry.html (JS regex)
 Implemented full client-side form validation on contact.html (JS regex)
 Integrated EmailJS SDK — both forms POST to liferestoration337@gmail.com
 Updated <head> on all pages
 
 17/06/2026
+v3.3
 Integrated EmailJS SDK — both forms POST to liferestoration337@gmail.com
 Added dynamic card number field on enquiry.html (JS `addEventListener change`)
 Added Nedbank bank account details to enquiry.html inside `<details>` element
 Built image lightbox on services.html with prev/next/keyboard navigation (JS)
+
+18/06/2026
+v3.4
+Added SEO meta tags (description, keywords, robots, canonical) to all pages
+Added Open Graph meta tags to all pages
+Added JSON-LD structured data (Schema.org ChildCare) to index.html
+Created robots.txt
+Created sitemap.xml (all 5 pages)
+Added `aria-label` and `scope` attributes for accessibility
+
 
 # Responsive Design on different screens
 ![](<Screenshot 2026-05-29 231003.png>)

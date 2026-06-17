@@ -319,3 +319,119 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
 }); // end DOMContentLoaded
+
+
+/*HELPER: FORM VALIDATION — ENQUIRY*/
+function validateEnquiryForm() {
+    clearAllErrors();
+    let valid = true;
+
+    const name = document.getElementById('name');
+    const surname = document.getElementById('surname');
+    const cell = document.getElementById('cell');
+    const email = document.getElementById('email');
+    const purpose = document.getElementById('purpose');
+    const enquiryText = document.getElementById('enquiry_text');
+
+    if (!name || name.value.trim() === '') {
+        showFieldError('name', 'Please enter your first name.');
+        valid = false;
+    }
+    if (!surname || surname.value.trim() === '') {
+        showFieldError('surname', 'Please enter your surname.');
+        valid = false;
+    }
+    if (!cell || !/^[\d\s\+\-\(\)]{7,15}$/.test(cell.value.trim())) {
+        showFieldError('cell', 'Please enter a valid phone number.');
+        valid = false;
+    }
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) {
+        showFieldError('email', 'Please enter a valid email address.');
+        valid = false;
+    }
+    if (!purpose || purpose.value === '') {
+        showFieldError('purpose', 'Please select a purpose.');
+        valid = false;
+    }
+    if (!enquiryText || enquiryText.value.trim().length < 10) {
+        showFieldError('enquiry_text', 'Please provide more detail (minimum 10 characters).');
+        valid = false;
+    }
+
+    return valid;
+}
+
+/*HELPER: FORM VALIDATION — CONTACT*/
+function validateContactForm() {
+    clearAllErrors();
+    let valid = true;
+
+    const fullName = document.getElementById('fullName');
+    const contactEmail = document.getElementById('contactEmail');
+    const messageType = document.getElementById('messageType');
+    const fullMessage = document.getElementById('fullMessage');
+
+    if (!fullName || fullName.value.trim() === '') {
+        showFieldError('fullName', 'Please enter your full name.');
+        valid = false;
+    }
+    if (!contactEmail || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(contactEmail.value.trim())) {
+        showFieldError('contactEmail', 'Please enter a valid email address.');
+        valid = false;
+    }
+    if (!messageType || messageType.value === '') {
+        showFieldError('messageType', 'Please select a message type.');
+        valid = false;
+    }
+    if (!fullMessage || fullMessage.value.trim().length < 10) {
+        showFieldError('fullMessage', 'Please enter a message (minimum 10 characters).');
+        valid = false;
+    }
+
+    return valid;
+}
+
+/*HELPER: SHOW ERROR UNDER A FIELD*/
+function showFieldError(fieldId, message) {
+    const field = document.getElementById(fieldId);
+    if (!field) return;
+
+    field.classList.add('input-error');
+    const errorSpan = document.createElement('span');
+    errorSpan.className = 'field-error-msg';
+    errorSpan.textContent = message;
+    errorSpan.setAttribute('role', 'alert');
+
+    // Insert after the field
+    field.parentNode.insertBefore(errorSpan, field.nextSibling);
+}
+
+/*HELPER: CLEAR ALL FIELD ERRORS */
+function clearAllErrors() {
+    document.querySelectorAll('.field-error-msg').forEach(function (el) { el.remove(); });
+    document.querySelectorAll('.input-error').forEach(function (el) { el.classList.remove('input-error'); });
+}
+
+/*HELPER: SHOW FORM SUCCESS / ERROR MESSAGE BANNER*/
+function showFormMessage(form, type, message) {
+    // Remove any existing message
+    const existing = document.getElementById('form-status-msg');
+    if (existing) existing.remove();
+
+    const msg = document.createElement('div');
+    msg.id = 'form-status-msg';
+    msg.className = 'form-status ' + type;
+    msg.textContent = message;
+    msg.setAttribute('role', 'status');
+    msg.setAttribute('aria-live', 'polite');
+
+    form.parentNode.insertBefore(msg, form);
+
+    // Auto-remove after 8 seconds
+    setTimeout(function () {
+        if (msg.parentNode) msg.remove();
+    }, 8000);
+
+    // Scroll to message
+    msg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}

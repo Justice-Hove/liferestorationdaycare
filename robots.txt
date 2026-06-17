@@ -1,0 +1,8 @@
+# robots.txt — Life Restoration Day Care
+# Instructs search engine crawlers which pages to index
+
+User-agent: *
+Allow: /
+Disallow: /js/
+
+Sitemap: https://liferestorationdaycare.netlify.app/sitemap.xml
