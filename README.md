@@ -148,6 +148,18 @@ Testing the website implemantation on multiple devices
 Attatching evidence of how the website looks on different gadgets
 Crosschecking the code and launching the website on different browsers
 
+14/06/2026
+v3.0
+Created `js/main.js` 
+ external JavaScript file linked to all 5 pages
+Added active nav link highlighting (JS DOM — `window.location.pathname`)
+Added scroll-to-top button (JS — `window.scroll`, `classList.toggle`)
+Added animated stats counter strip to index.html (JS `setInterval`)
+
+15/06/2026
+Added cookie consent banner with localStorage (JS)
+
+
 # Responsive Design on different screens
 ![](<Screenshot 2026-05-29 231003.png>)
 On the PC

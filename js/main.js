@@ -31,3 +31,46 @@ document.addEventListener('DOMContentLoaded', function () {
     scrollBtn.addEventListener('click', function () {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
+
+    
+    /* COOKIE CONSENT BANNER */
+    if (!localStorage.getItem('cookieConsent')) {
+        const banner = document.createElement('div');
+        banner.id = 'cookieBanner';
+        banner.innerHTML = `
+            <p>🍪 We use cookies to enhance your experience on our website. By continuing, you agree to our use of cookies.</p>
+            <button id="cookieAccept">Accept</button>
+            <button id="cookieDecline">Decline</button>
+        `;
+        document.body.appendChild(banner);
+
+        document.getElementById('cookieAccept').addEventListener('click', function () {
+            localStorage.setItem('cookieConsent', 'accepted');
+            banner.remove();
+        });
+        document.getElementById('cookieDecline').addEventListener('click', function () {
+            localStorage.setItem('cookieConsent', 'declined');
+            banner.remove();
+        });
+    }
+
+    /* ANIMATED STAT COUNTERS — index.html only */
+    const counters = document.querySelectorAll('.stat-counter');
+    if (counters.length > 0) {
+        counters.forEach(function (counter) {
+            const target = parseInt(counter.getAttribute('data-target'), 10);
+            const duration = 2000;
+            const step = target / (duration / 16);
+            let current = 0;
+
+            const timer = setInterval(function () {
+                current += step;
+                if (current >= target) {
+                    counter.textContent = target + '+';
+                    clearInterval(timer);
+                } else {
+                    counter.textContent = Math.floor(current);
+                }
+            }, 16);
+        });
+    }
