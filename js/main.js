@@ -1,4 +1,24 @@
-/* ACTIVE NAV LINK — highlight current page in navigation*/
+/**
+ * main.js — Life Restoration Day Care
+ * Part 3: JavaScript Functionality
+ * Student: Justice Hove | ST10537282
+ * 
+ * Covers:
+ *  1. Active navigation highlighting
+ *  2. Scroll-to-top button
+ *  3. Cookie consent banner
+ *  4. Hero section animated counter (index)
+ *  5. Service card fade-in on scroll (IntersectionObserver)
+ *  6. Enquiry form validation + EmailJS submission
+ *  7. Contact form validation + EmailJS submission
+ *  8. Donation card toggle on enquiry page
+ *  9. Image gallery lightbox (services)
+ * 10. Current year auto-update in footer
+ */
+
+/* ============================================================
+   1. ACTIVE NAV LINK — highlight current page in navigation
+   ============================================================ */
 document.addEventListener('DOMContentLoaded', function () {
 
     // --- Active Nav Link ---
@@ -11,8 +31,9 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    /* SCROLL-TO-TOP BUTTON*/
-
+    /* ============================================================
+       2. SCROLL-TO-TOP BUTTON
+       ============================================================ */
     const scrollBtn = document.createElement('button');
     scrollBtn.id = 'scrollTopBtn';
     scrollBtn.title = 'Back to top';
@@ -32,8 +53,9 @@ document.addEventListener('DOMContentLoaded', function () {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    
-    /* COOKIE CONSENT BANNER */
+    /* ============================================================
+       3. COOKIE CONSENT BANNER
+       ============================================================ */
     if (!localStorage.getItem('cookieConsent')) {
         const banner = document.createElement('div');
         banner.id = 'cookieBanner';
@@ -54,7 +76,9 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    /* ANIMATED STAT COUNTERS — index.html only */
+    /* ============================================================
+       4. ANIMATED STAT COUNTERS — index.html only
+       ============================================================ */
     const counters = document.querySelectorAll('.stat-counter');
     if (counters.length > 0) {
         counters.forEach(function (counter) {
@@ -75,7 +99,9 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-        /*FADE-IN ON SCROLL — service cards & sections*/
+    /* ============================================================
+       5. FADE-IN ON SCROLL — service cards & sections
+       ============================================================ */
     const fadeTargets = document.querySelectorAll('.service-card, .dashboard-card, #our-staff article, #staff-grid article');
 
     if ('IntersectionObserver' in window) {
@@ -99,8 +125,9 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    
-    /* ENQUIRY FORM VALIDATION + EMAILJS*/
+    /* ============================================================
+       6. ENQUIRY FORM VALIDATION + EMAILJS
+       ============================================================ */
     const enquiryForm = document.querySelector('#enquiry-form-section form');
     if (enquiryForm) {
         // Toggle card field visibility based on purpose selection
@@ -207,7 +234,9 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    /*  CONTACT FORM VALIDATION + EMAILJS */
+    /* ============================================================
+       7. CONTACT FORM VALIDATION + EMAILJS
+       ============================================================ */
     const contactForm = document.querySelector('#contact-form-section form');
     if (contactForm) {
         contactForm.addEventListener('submit', function (e) {
@@ -247,14 +276,17 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    
-    /* AUTO-UPDATE FOOTER YEAR*/
+    /* ============================================================
+       8. AUTO-UPDATE FOOTER YEAR
+       ============================================================ */
     const yearSpans = document.querySelectorAll('.footer-year');
     yearSpans.forEach(function (span) {
         span.textContent = new Date().getFullYear();
     });
 
-    /* SERVICES PAGE — IMAGE LIGHTBOX*/
+    /* ============================================================
+       9. SERVICES PAGE — IMAGE LIGHTBOX
+       ============================================================ */
     const galleryImages = document.querySelectorAll('#activities-grid .service-card img');
     if (galleryImages.length > 0) {
         // Create lightbox elements
@@ -321,7 +353,9 @@ document.addEventListener('DOMContentLoaded', function () {
 }); // end DOMContentLoaded
 
 
-/*HELPER: FORM VALIDATION — ENQUIRY*/
+/* ============================================================
+   HELPER: FORM VALIDATION — ENQUIRY
+   ============================================================ */
 function validateEnquiryForm() {
     clearAllErrors();
     let valid = true;
@@ -361,7 +395,9 @@ function validateEnquiryForm() {
     return valid;
 }
 
-/*HELPER: FORM VALIDATION — CONTACT*/
+/* ============================================================
+   HELPER: FORM VALIDATION — CONTACT
+   ============================================================ */
 function validateContactForm() {
     clearAllErrors();
     let valid = true;
@@ -391,7 +427,9 @@ function validateContactForm() {
     return valid;
 }
 
-/*HELPER: SHOW ERROR UNDER A FIELD*/
+/* ============================================================
+   HELPER: SHOW ERROR UNDER A FIELD
+   ============================================================ */
 function showFieldError(fieldId, message) {
     const field = document.getElementById(fieldId);
     if (!field) return;
@@ -406,13 +444,17 @@ function showFieldError(fieldId, message) {
     field.parentNode.insertBefore(errorSpan, field.nextSibling);
 }
 
-/*HELPER: CLEAR ALL FIELD ERRORS */
+/* ============================================================
+   HELPER: CLEAR ALL FIELD ERRORS
+   ============================================================ */
 function clearAllErrors() {
     document.querySelectorAll('.field-error-msg').forEach(function (el) { el.remove(); });
     document.querySelectorAll('.input-error').forEach(function (el) { el.classList.remove('input-error'); });
 }
 
-/*HELPER: SHOW FORM SUCCESS / ERROR MESSAGE BANNER*/
+/* ============================================================
+   HELPER: SHOW FORM SUCCESS / ERROR MESSAGE BANNER
+   ============================================================ */
 function showFormMessage(form, type, message) {
     // Remove any existing message
     const existing = document.getElementById('form-status-msg');

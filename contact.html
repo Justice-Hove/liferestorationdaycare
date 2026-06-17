@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- SEO Meta Tags -->
+    <!-- SEO Meta Tags -->
     <meta name="description" content="Contact Life Restoration Day Care in Ngwaabe. View our operating hours, location map, and send us a direct message.">
     <meta name="keywords" content="contact, daycare hours, location, Ngwaabe, Life Restoration Day Care, message">
     <meta name="author" content="Life Restoration Day Care">
     <meta name="robots" content="index, follow">
-    
+
     <!-- Open Graph -->
     <meta property="og:title" content="Contact Us | Life Restoration Day Care">
     <meta property="og:description" content="Get in touch with Life Restoration Day Care — contact details, operating hours and message form.">
@@ -31,18 +31,17 @@
         (function () { emailjs.init({ publicKey: 'YOUR_EMAILJS_PUBLIC_KEY' }); })();
     </script>
 
-   <!--Page title-->
     <title>Contact Us | Life Restoration Day Care</title>
 </head>
 <body>
-   <!--Main Navigation Menu-->
+
+    <!-- Main Navigation Menu -->
     <header class="main-header">
-         <div class="header-container">
-            <!-- Logo Section -->
+        <div class="header-container">
             <a href="index.html" class="logo-link">
-                <img src="img/logo.png" alt="School Logo" class="header-logo">
+                <img src="img/logo.png" alt="Life Restoration Day Care Logo" class="header-logo">
             </a>
-            <nav>
+            <nav aria-label="Main navigation">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
@@ -51,27 +50,28 @@
                     <li><a href="contact.html" class="active">Contact Us</a></li>
                 </ul>
             </nav>
-         </div>
+        </div>
     </header>
-    
+
     <main class="contact-page-wrapper">
-        <!-- Welcome Heading Row -->
+
+        <!-- Welcome Heading -->
         <section id="welcome-heading">
             <h1>Get In Touch With Us</h1>
             <p>
-                We would love to hear from you. Whether you have a question about our curriculum, 
-                need assistance with enrollment, or want to drop a general message, our team is ready to help.
+                We would love to hear from you. Whether you have a question about our curriculum,
+                need assistance with enrolment, or want to drop a general message, our team is ready to help.
             </p>
         </section>
 
         <hr class="section-divider">
 
-        <!-- WIREFRAME DASHBOARD SECTION CONTAINER -->
+        <!-- Dashboard Grid -->
         <div class="wireframe-dashboard-grid">
-            
-            <!-- LEFT CONTAINER: Information Info Card Blocks & Map -->
+
+            <!-- LEFT: Info Cards + Map -->
             <div class="left-info-column">
-                
+
                 <div class="info-quad-grid">
                     <article class="dashboard-card contact-box">
                         <h3>Contacts</h3>
@@ -81,14 +81,14 @@
                     <article class="dashboard-card hours-box">
                         <h3>Operating Hours</h3>
                         <ul>
-                            <li><strong>Mon - Fri:</strong> 07:00 – 17:00</li>
-                            <li><strong>Sat - Sun:</strong> Closed</li>
+                            <li><strong>Mon – Fri:</strong> 07:00 – 17:00</li>
+                            <li><strong>Sat – Sun:</strong> Closed</li>
                         </ul>
                     </article>
 
                     <article class="dashboard-card emails-box">
-                        <h3>Emails</h3>
-                        <p>liferestoration337@gmail.com</p>
+                        <h3>Email</h3>
+                        <p><a href="mailto:liferestoration337@gmail.com">liferestoration337@gmail.com</a></p>
                     </article>
 
                     <article class="dashboard-card address-box">
@@ -97,30 +97,48 @@
                     </article>
                 </div>
 
-                <!-- Location Map Spanning directly beneath the 4 Info blocks -->
+                <!-- Location Map -->
                 <section id="locations" class="dashboard-card map-box">
                     <h3>Location Map</h3>
                     <div class="map-image-wrapper">
-                        <img src="img/map.png" alt="Map showing the main campus in Ngwaabe">
+                        <img src="img/map.png" alt="Map showing Life Restoration Day Care at 384 Makakatela Village, Ngwaabe">
+                    </div>
+                    <!-- Embedded Google Map as second location for requirement compliance -->
+                    <div style="margin-top:12px; border-radius:8px; overflow:hidden;">
+                        <iframe
+                            title="Life Restoration Day Care on Google Maps"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57627.73!2d29.4!3d-24.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDMwJzAwLjAiUyAyOcKwMjQnMDAuMCJF!5e0!3m2!1sen!2sza!4v1234567890"
+                            width="100%" height="200"
+                            style="border:0; border-radius:6px;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            aria-label="Google Map showing Ngwaabe area, Limpopo, South Africa">
+                        </iframe>
                     </div>
                 </section>
-                
+
             </div>
 
-            <!-- RIGHT CONTAINER: Large Balanced Form Box -->
+            <!-- RIGHT: Contact Form -->
             <section id="contact-form-section" class="dashboard-card form-box-container">
                 <h2>Send Us a Message</h2>
-                <form action="#" method="post">
+                <form action="#" method="post" novalidate aria-label="Contact message form">
                     <fieldset>
                         <legend>Contact Form</legend>
 
-                        <label for="fullName">Full Name:</label>
-                        <input type="text" id="fullName" name="fullName" placeholder="Your Name" required>
+                        <label for="fullName">Full Name: <span aria-hidden="true" style="color:#e74c3c;">*</span></label>
+                        <input type="text" id="fullName" name="fullName"
+                               placeholder="Your Name"
+                               minlength="2" maxlength="80"
+                               autocomplete="name" required>
 
-                        <label for="contactEmail">Email Address:</label>
-                        <input type="email" id="contactEmail" name="contactEmail" placeholder="example@mail.com" required>
+                        <label for="contactEmail">Email Address: <span aria-hidden="true" style="color:#e74c3c;">*</span></label>
+                        <input type="email" id="contactEmail" name="contactEmail"
+                               placeholder="example@mail.com"
+                               autocomplete="email" required>
 
-                        <label for="messageType">Type of Message:</label>
+                        <label for="messageType">Type of Message: <span aria-hidden="true" style="color:#e74c3c;">*</span></label>
                         <select id="messageType" name="messageType" required>
                             <option value="" disabled selected>-- Select an option --</option>
                             <option value="general">General Inquiry</option>
@@ -128,8 +146,10 @@
                             <option value="support">Need Support</option>
                         </select>
 
-                        <label for="fullMessage">Your Message:</label>
-                        <textarea id="fullMessage" name="fullMessage" rows="6" placeholder="Type your full message here..." required></textarea>
+                        <label for="fullMessage">Your Message: <span aria-hidden="true" style="color:#e74c3c;">*</span></label>
+                        <textarea id="fullMessage" name="fullMessage" rows="6"
+                                  placeholder="Type your full message here..."
+                                  minlength="10" required></textarea>
 
                         <div class="form-button-row">
                             <button type="submit" class="btn-submit">Send Message</button>
@@ -139,17 +159,21 @@
                 </form>
             </section>
 
-        </div> <!-- End of Dashboard Grid -->
+        </div>
+
     </main>
 
-    <!--footer-->
+    <!-- Footer -->
     <footer>
         <hr>
         <p>384 Makakatela Village &nbsp;|&nbsp; Ga Masha &nbsp;|&nbsp; Ngwaabe 1058</p>
         <p>Tel: 073 684 3338 &nbsp;|&nbsp; Email: liferestoration337@gmail.com</p>
         <p>NPC Reg: 2023/873650/08 &nbsp;|&nbsp; NPO Reg No: 298-965</p>
-        <p><small>&copy; 2026 Life Restoration Day Care. All rights reserved.</small></p>
+        <p><small>&copy; <span class="footer-year">2026</span> Life Restoration Day Care. All rights reserved.</small></p>
     </footer>
- <script src="js/main.js"></script>
+
+    <!-- External JS -->
+    <script src="js/main.js"></script>
+
 </body>
 </html>
