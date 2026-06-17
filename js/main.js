@@ -74,3 +74,27 @@ document.addEventListener('DOMContentLoaded', function () {
             }, 16);
         });
     }
+
+        /*FADE-IN ON SCROLL — service cards & sections*/
+    const fadeTargets = document.querySelectorAll('.service-card, .dashboard-card, #our-staff article, #staff-grid article');
+
+    if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+
+        fadeTargets.forEach(function (el) {
+            el.classList.add('fade-in-hidden');
+            observer.observe(el);
+        });
+    } else {
+        // Fallback for browsers without IntersectionObserver
+        fadeTargets.forEach(function (el) {
+            el.classList.add('fade-in-visible');
+        });
+    }
