@@ -3,88 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Enquire about enrollment or donate to Life Restoration Day Care.">
-   
-   <!--Title of the page-->
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Enquire about enrolment at Life Restoration Day Care or make a donation to support our NPO in Ngwaabe, Limpopo.">
+    <meta name="keywords" content="enquiry, enrolment, donate, volunteer, Life Restoration Day Care, NPO">
+    <meta name="author" content="Life Restoration Day Care">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Enquiry & Donations | Life Restoration Day Care">
+    <meta property="og:description" content="Send an enquiry or donate to support Life Restoration Day Care.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://liferestorationdaycare.netlify.app/enquiry.html">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://liferestorationdaycare.netlify.app/enquiry.html">
+
+    <!-- Fonts & Stylesheet -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        (function () { emailjs.init({ publicKey: 'YOUR_EMAILJS_PUBLIC_KEY' }); })();
+    </script>
+
     <title>Enquiry | Life Restoration Day Care</title>
 </head>
 <body>
 
-    <!--Main navigation menu-->
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="enquiry.html">Enquiry</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
+    <!-- Main Navigation Menu -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo-link">
+                <img src="img/logo.png" alt="Life Restoration Day Care Logo" class="header-logo">
+            </a>
+            <nav aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="enquiry.html">Enquiry</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <!--Welcome area-->
     <main>
+
+        <!-- Welcome Heading -->
         <section id="welcome-heading">
-            <h1>Enquiry & Donations</h1>
-            <p>
-                We welcome all questions regarding student enrollment, after-school support, 
-                and community volunteering. If you wish to support our NPO financially, 
-                please select "Donate" below.
-            </p>
+            <article class="service-card">
+                <h1>Enquiry &amp; Donations</h1>
+                <p>
+                    We welcome all questions regarding student enrolment, after-school support,
+                    and community volunteering. If you wish to support our NPO financially,
+                    please select <strong>Donate / Sponsor</strong> from the dropdown below — the card
+                    number field will appear automatically.
+                </p>
+                <!-- Bank Account Info pulled from the Nedbank confirmation letter -->
+                <details style="margin-top:14px;">
+                    <summary style="cursor:pointer; font-weight:bold; color:#0d1b2a;">
+                        🏦 Donation Bank Account Details
+                    </summary>
+                    <div style="margin-top:10px; padding:10px; background:#f9f3ee; border-radius:8px; font-size:0.9rem;">
+                        <p><strong>Account Name:</strong> Life Restoration Center NPC</p>
+                        <p><strong>Bank:</strong> Nedbank</p>
+                        <p><strong>Account Number:</strong> 1284815625</p>
+                        <p><strong>Branch Code:</strong> 198765</p>
+                        <p><strong>Account Type:</strong> Current Account</p>
+                        <p><strong>SWIFT Code:</strong> NEDSZAJJ</p>
+                    </div>
+                </details>
+            </article>
         </section>
 
         <hr>
-<!--Enquiry section-->
+
+        <!-- Enquiry Form -->
         <section id="enquiry-form-section">
-            <form action="#" method="post">
-                
-                <!--Customer details-->
+            <form action="#" method="post" novalidate aria-label="Enquiry and donation form">
+
+                <!-- Personal Details -->
                 <fieldset>
                     <legend>Personal Information</legend>
-                    
-                    <label for="name">Name:</label><br>
-                    <input type="text" id="name" name="name" placeholder="First Name" required>
-                    <br><br>
 
-                    <label for="surname">Surname:</label><br>
-                    <input type="text" id="surname" name="surname" placeholder="Last Name" required>
-                    <br><br>
+                    <label for="name">Name: <span aria-hidden="true" style="color:#e74c3c;">*</span></label><br>
+                    <input type="text" id="name" name="name" placeholder="First Name"
+                           minlength="2" maxlength="50" autocomplete="given-name" required><br><br>
 
-                    <label for="cell">Cell:</label><br>
-                    <input type="tel" id="cell" name="cell" placeholder="073 123 4567" required>
-                    <br><br>
+                    <label for="surname">Surname: <span aria-hidden="true" style="color:#e74c3c;">*</span></label><br>
+                    <input type="text" id="surname" name="surname" placeholder="Last Name"
+                           minlength="2" maxlength="50" autocomplete="family-name" required><br><br>
 
-                    <label for="email">Email:</label><br>
-                    <input type="email" id="email" name="email" placeholder="example@mail.com" required>
-                    <br><br>
+                    <label for="cell">Cell: <span aria-hidden="true" style="color:#e74c3c;">*</span></label><br>
+                    <input type="tel" id="cell" name="cell" placeholder="073 123 4567"
+                           pattern="[\d\s\+\-\(\)]{7,15}" autocomplete="tel" required><br><br>
+
+                    <label for="email">Email: <span aria-hidden="true" style="color:#e74c3c;">*</span></label><br>
+                    <input type="email" id="email" name="email" placeholder="example@mail.com"
+                           autocomplete="email" required><br><br>
                 </fieldset>
 
                 <br>
 
-                <!--Enquiry details section-->
+                <!-- Enquiry Details -->
                 <fieldset>
                     <legend>Enquiry Details</legend>
 
-                    <label for="purpose">Purpose (Dropdown Menu):</label><br>
+                    <label for="purpose">Purpose: <span aria-hidden="true" style="color:#e74c3c;">*</span></label><br>
                     <select id="purpose" name="purpose" required>
                         <option value="" disabled selected>-- Select Purpose --</option>
-                        <option value="enrollment">Student Enrollment</option>
+                        <option value="enrollment">Student Enrolment</option>
                         <option value="donate">Donate / Sponsor</option>
                         <option value="volunteer">Volunteer</option>
                         <option value="general">General Question</option>
-                    </select>
-                    <br><br>
+                    </select><br><br>
 
-                    <!--Card number input section if customer wants to donate-->
-                    <label for="card">Card Number (If DONATE is selected on purpose dropdown):</label><br>
-                    <input type="text" id="card" name="card" placeholder="1234 5678 9101 1121">
-                    <br><br>
+                    <!-- Card number — shown by JS only when Donate is selected -->
+                    <div id="card-group">
+                        <label for="card">Card Number <em>(Donate only)</em>:</label><br>
+                        <input type="text" id="card" name="card"
+                               placeholder="1234 5678 9101 1121"
+                               maxlength="19"
+                               pattern="\d{4}\s?\d{4}\s?\d{4}\s?\d{4}"><br><br>
+                        <small style="color:#555;">
+                            Alternatively, you may do an EFT directly to our Nedbank account above.
+                        </small><br><br>
+                    </div>
 
-                    <!--enquiry text-->
-                    <label for="enquiry_text">Enquiry Text (Additional Information):</label><br>
-                    <textarea id="enquiry_text" name="enquiry_text" rows="8" cols="60" placeholder="Please type your message or additional details here..." required></textarea>
-                    <br><br>
+                    <label for="enquiry_text">Additional Information: <span aria-hidden="true" style="color:#e74c3c;">*</span></label><br>
+                    <textarea id="enquiry_text" name="enquiry_text" rows="8" cols="60"
+                              placeholder="Please type your message or additional details here..."
+                              minlength="10" required></textarea><br><br>
                 </fieldset>
 
                 <br>
@@ -92,21 +147,25 @@
                 <div>
                     <button type="submit" name="action" value="enquire">ENQUIRE</button>
                     &nbsp;&nbsp;&nbsp;
-                    <button type="submit" name="action" value="donate">DONATE (When selected Donate)</button>
+                    <button type="button" name="action" value="donate">DONATE</button>
                 </div>
 
             </form>
         </section>
+
     </main>
 
-    <!--footer-->
+    <!-- Footer -->
     <footer>
         <hr>
         <p>384 Makakatela Village &nbsp;|&nbsp; Ga Masha &nbsp;|&nbsp; Ngwaabe 1058</p>
         <p>Tel: 073 684 3338 &nbsp;|&nbsp; Email: liferestoration337@gmail.com</p>
         <p>NPC Reg: 2023/873650/08 &nbsp;|&nbsp; NPO Reg No: 298-965</p>
-        <p><small>&copy; 2026 Life Restoration Day Care. All rights reserved.</small></p>
+        <p><small>&copy; <span class="footer-year">2026</span> Life Restoration Day Care. All rights reserved.</small></p>
     </footer>
+
+    <!-- External JS -->
+    <script src="js/main.js"></script>
 
 </body>
 </html>

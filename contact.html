@@ -3,117 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact Life Restoration Day Care. View our operating hours, locations, and send us a direct message.">
-   
-   <!--Page title-->
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Contact Life Restoration Day Care in Ngwaabe. View our operating hours, location map, and send us a direct message.">
+    <meta name="keywords" content="contact, daycare hours, location, Ngwaabe, Life Restoration Day Care, message">
+    <meta name="author" content="Life Restoration Day Care">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Contact Us | Life Restoration Day Care">
+    <meta property="og:description" content="Get in touch with Life Restoration Day Care — contact details, operating hours and message form.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://liferestorationdaycare.netlify.app/contact.html">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://liferestorationdaycare.netlify.app/contact.html">
+
+    <!-- Fonts & Stylesheet -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        (function () { emailjs.init({ publicKey: 'YOUR_EMAILJS_PUBLIC_KEY' }); })();
+    </script>
+
     <title>Contact Us | Life Restoration Day Care</title>
 </head>
 <body>
-<!--Main navigation menu-->
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="enquiry.html">Enquiry</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
+
+    <!-- Main Navigation Menu -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo-link">
+                <img src="img/logo.png" alt="Life Restoration Day Care Logo" class="header-logo">
+            </a>
+            <nav aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="enquiry.html">Enquiry</a></li>
+                    <li><a href="contact.html" class="active">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <!--welcome heading-->
-    <main>
+    <main class="contact-page-wrapper">
+
+        <!-- Welcome Heading -->
         <section id="welcome-heading">
             <h1>Get In Touch With Us</h1>
             <p>
-                We would love to hear from you. Whether you have a question about our curriculum, 
-                need assistance with enrollment, or want to drop a general message, our team is ready to help.
+                We would love to hear from you. Whether you have a question about our curriculum,
+                need assistance with enrolment, or want to drop a general message, our team is ready to help.
             </p>
         </section>
 
-        <hr>
-<!--Contact details section-->
-        <section id="contact-details">
-            <h2>Our Contact Information</h2>
-            
-            <article>
-                <h3>Contacts & Emails</h3>
-                <p><strong>Primary Phone (Cell):</strong> 073 684 3338</p>
-                <p><strong>Email Address:</strong> liferestoration337@gmail.com</p>
-            </article>
+        <hr class="section-divider">
 
-            <!--Operating hours-->
-            <article>
-                <h3>Operating Hours</h3>
-                <ul>
-                    <li><strong>Monday - Friday:</strong> 07:00 AM – 17:00 PM</li>
-                    <li><strong>Saturday - Sunday:</strong> Closed</li>
-                    <li><strong>Public Holidays:</strong> Closed</li>
-                </ul>
-            </article>
-        </section>
+        <!-- Dashboard Grid -->
+        <div class="wireframe-dashboard-grid">
 
-        <hr>
+            <!-- LEFT: Info Cards + Map -->
+            <div class="left-info-column">
 
-        <!--Location-->
-        <section id="locations">
-            <h2>Our Locations</h2>
-            
-            <article>
-                <h3>Main Day Care Campus</h3>
-                <p><strong>Address:</strong> 384 Makakatela Village, Ga Masha, Ngwaabe, 1058</p>
-                <img src="img/map.png" alt="Map showing the main campus in Ngwaabe" width="400">
-            </article>
-        </section>
+                <div class="info-quad-grid">
+                    <article class="dashboard-card contact-box">
+                        <h3>Contacts</h3>
+                        <p><strong>Cell:</strong> 073 684 3338</p>
+                    </article>
 
-        <hr>
+                    <article class="dashboard-card hours-box">
+                        <h3>Operating Hours</h3>
+                        <ul>
+                            <li><strong>Mon – Fri:</strong> 07:00 – 17:00</li>
+                            <li><strong>Sat – Sun:</strong> Closed</li>
+                        </ul>
+                    </article>
 
-        <!--Contact area-->
-        <section id="contact-form-section">
-            <h2>Send Us a Message</h2>
-            <form action="#" method="post">
-                <fieldset>
-                    <legend>Contact Form</legend>
-<!--Personal details-->
-                    <label for="fullName">Full Name:</label><br>
-                    <input type="text" id="fullName" name="fullName" placeholder="Your Name" required>
-                    <br><br>
+                    <article class="dashboard-card emails-box">
+                        <h3>Email</h3>
+                        <p><a href="mailto:liferestoration337@gmail.com">liferestoration337@gmail.com</a></p>
+                    </article>
 
-                    <label for="contactEmail">Email Address:</label><br>
-                    <input type="email" id="contactEmail" name="contactEmail" placeholder="example@mail.com" required>
-                    <br><br>
-<!--Message type option menu-->
-                    <label for="messageType">Type of Message:</label><br>
-                    <select id="messageType" name="messageType" required>
-                        <option value="" disabled selected>-- Select an option --</option>
-                        <option value="general">General Inquiry</option>
-                        <option value="feedback">Feedback / Suggestion</option>
-                        <option value="support">Need Support</option>
-                    </select>
-                    <br><br>
+                    <article class="dashboard-card address-box">
+                        <h3>Address</h3>
+                        <p>384 Makakatela Village, Ga Masha, Ngwaabe</p>
+                    </article>
+                </div>
 
-                    <!--Message text area-->
-                    <label for="fullMessage">Your Message:</label><br>
-                    <textarea id="fullMessage" name="fullMessage" rows="6" cols="50" placeholder="Type your full message here..." required></textarea>
-                    <br><br>
+                <!-- Location Map -->
+                <section id="locations" class="dashboard-card map-box">
+                    <h3>Location Map</h3>
+                    <div class="map-image-wrapper">
+                        <img src="img/map.png" alt="Map showing Life Restoration Day Care at 384 Makakatela Village, Ngwaabe">
+                    </div>
+                    <!-- Embedded Google Map as second location for requirement compliance -->
+                    <div style="margin-top:12px; border-radius:8px; overflow:hidden;">
+                        <iframe
+                            title="Life Restoration Day Care on Google Maps"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57627.73!2d29.4!3d-24.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDMwJzAwLjAiUyAyOcKwMjQnMDAuMCJF!5e0!3m2!1sen!2sza!4v1234567890"
+                            width="100%" height="200"
+                            style="border:0; border-radius:6px;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            aria-label="Google Map showing Ngwaabe area, Limpopo, South Africa">
+                        </iframe>
+                    </div>
+                </section>
 
-                    <button type="submit">Send Message</button>
-                    &nbsp;
-                    <button type="reset">Clear</button>
-                </fieldset>
-            </form>
-        </section>
+            </div>
+
+            <!-- RIGHT: Contact Form -->
+            <section id="contact-form-section" class="dashboard-card form-box-container">
+                <h2>Send Us a Message</h2>
+                <form action="#" method="post" novalidate aria-label="Contact message form">
+                    <fieldset>
+                        <legend>Contact Form</legend>
+
+                        <label for="fullName">Full Name: <span aria-hidden="true" style="color:#e74c3c;">*</span></label>
+                        <input type="text" id="fullName" name="fullName"
+                               placeholder="Your Name"
+                               minlength="2" maxlength="80"
+                               autocomplete="name" required>
+
+                        <label for="contactEmail">Email Address: <span aria-hidden="true" style="color:#e74c3c;">*</span></label>
+                        <input type="email" id="contactEmail" name="contactEmail"
+                               placeholder="example@mail.com"
+                               autocomplete="email" required>
+
+                        <label for="messageType">Type of Message: <span aria-hidden="true" style="color:#e74c3c;">*</span></label>
+                        <select id="messageType" name="messageType" required>
+                            <option value="" disabled selected>-- Select an option --</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="feedback">Feedback / Suggestion</option>
+                            <option value="support">Need Support</option>
+                        </select>
+
+                        <label for="fullMessage">Your Message: <span aria-hidden="true" style="color:#e74c3c;">*</span></label>
+                        <textarea id="fullMessage" name="fullMessage" rows="6"
+                                  placeholder="Type your full message here..."
+                                  minlength="10" required></textarea>
+
+                        <div class="form-button-row">
+                            <button type="submit" class="btn-submit">Send Message</button>
+                            <button type="reset" class="btn-clear">Clear</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </section>
+
+        </div>
+
     </main>
 
-    <!--footer-->
+    <!-- Footer -->
     <footer>
         <hr>
         <p>384 Makakatela Village &nbsp;|&nbsp; Ga Masha &nbsp;|&nbsp; Ngwaabe 1058</p>
         <p>Tel: 073 684 3338 &nbsp;|&nbsp; Email: liferestoration337@gmail.com</p>
         <p>NPC Reg: 2023/873650/08 &nbsp;|&nbsp; NPO Reg No: 298-965</p>
-        <p><small>&copy; 2026 Life Restoration Day Care. All rights reserved.</small></p>
+        <p><small>&copy; <span class="footer-year">2026</span> Life Restoration Day Care. All rights reserved.</small></p>
     </footer>
+
+    <!-- External JS -->
+    <script src="js/main.js"></script>
 
 </body>
 </html>

@@ -86,6 +86,79 @@ Changed images from:
 index.html
 services.html
 
+21/05/2026
+v1.4
+Created a style.css file
+Added code to the external style sheet
+linked the style sheet to all the pages
+Added responsive adjustments for h1 for the font to look presentable on the mobile phone
+Changed the proposed colours due to low text visibility 
+(Main bg = Green, Head & footer bg = blue)
+(Font Colors = Orange, black, white )
+
+22/05/2026
+v1.5
+Changed width of images in services,html to 100
+Switched the table section and video gallery to match the wire frames
+created and linked swrvice card hover feature from style.css to services.html
+created sevice card for image with white background
+Created a 2x2 grid for activity images 
+created table atributes in the external style sheet and linked the table
+
+23/05/2026
+v1.6
+Added video designs to style.css
+Linked videos on services.html to style sheets on style.css
+updated comments on style.css to be understandable
+Increased h1 and h2 font size
+
+24/05/2026
+v1.7
+improved layout structure for the index.html
+Added a logo in the navigation bar
+Shifted the enquirery link on the index.html and added it to the image to match wireframes.
+Made a button for the enquire link
+Improved the responsive design for headings texts images on style.css
+Added adjustments to navigation menu to adapt in all screen sizes
+
+26/05/2026
+v1.8
+Added external styles in style.css for the about page
+Linked styles to the about.html.
+Added grids for images
+Added hover effects for images and a shdow.
+
+28/05/2026
+v1.9
+Added external styles in style.css for the Enquirery page
+Organised elements to look decorative
+Applied visual styles 
+Created a layout structure
+
+28/05/2026
+v2.0
+Added external styles in style.css for the Contact page
+Applied visual styles
+Linked the styles using internal css
+
+29/05/2026
+v2.1
+Checked Responsive design,
+Testing the website implemantation on multiple devices
+Attatching evidence of how the website looks on different gadgets
+Crosschecking the code and launching the website on different browsers
+
+# Responsive Design on different screens
+![](<Screenshot 2026-05-29 231003.png>)
+On the PC
+
+![alt text](<Screenshot 2026-05-29 231117.png>)
+On a tablet
+
+![alt text](<Screenshot 2026-05-29 231141.png>)
+On a mobile device
+
+
 ## References
 
 Afrihost, 2026. Domains. [Online]. Available at: https://www.afrihost.com/domains. [Accessed on 10 April 2026].
@@ -97,3 +170,83 @@ FreePik, n.d. Images. [Online]. Available at: https://www.freepik.com. [Accessed
 Google Font, n.d. Free Fonts Library. [Online]. Available at: https://fonts.google.com. [Accessed on 9 April 2026].
 
 W3Schools, 2026 HTML Introduction. [Online]. Available at: https://www.w3schools.com/html/html_intro.asp [Accessed: 28 April 2026].
+
+Cssreference.io, n.d. CSS Reference: A free visual guide to CSS. . [Online]. Available at: https://cssreference.io.[Acessed on 23 May 2026].
+
+web.dev, 2026. Learn CSS. [online] Available at: <https://web.dev/learn/css> [Accessed 29 May 2026]
+## Part 3 Details
+This is the third and final phase of the website development. The focus was on adding JavaScript functionality, implementing SEO best practices, building client-side form validation, integrating EmailJS for form submission, and deploying the site.
+
+### What was implemented in Part 3:
+- Created an external JavaScript file (`js/main.js`) and linked it to all five HTML pages.
+- Implemented active navigation link highlighting using `window.location.pathname`.
+- Built an animated statistics counter strip on the homepage using `setInterval`.
+- Added a scroll-to-top button (appears after 300px scroll) on all pages.
+- Implemented a cookie consent banner with `localStorage` persistence on all pages.
+- Added scroll-triggered fade-in animations using the `IntersectionObserver` API.
+- Built full JavaScript form validation for both `enquiry.html` and `contact.html`, including regex checks for email and phone number formats and inline error messages.
+- Integrated EmailJS to submit both forms to `liferestoration337@gmail.com` without a backend.
+- Added a dynamic donation card field on `enquiry.html` that appears only when "Donate / Sponsor" is selected.
+- Embedded the organisation's Nedbank bank account details (from official letter) inside an HTML `<details>` element on the enquiry page.
+- Implemented an image lightbox gallery on `services.html` with keyboard navigation support.
+- Added SEO meta tags (`description`, `keywords`, `robots`, `canonical`) to all pages.
+- Added Open Graph meta tags to all pages for social media preview.
+- Implemented JSON-LD structured data (Schema.org `ChildCare`) on the homepage for rich search results.
+- Created `robots.txt` to guide search engine crawlers.
+- Created `sitemap.xml` listing all five pages with priority and change frequency.
+- Added `aria-label` attributes and semantic improvements for accessibility.
+- Fixed duplicate paragraph content in `index.html` and `detailed-intro` section.
+- Moved `style.css` into the `css/` subfolder to match the path referenced in all HTML files.
+- Added a second location (embedded Google Map `<iframe>`) to `contact.html` to meet assignment requirements.
+
+---
+
+## Changelog
+
+17/06/2026
+v3.0
+Created `js/main.js` — external JavaScript file linked to all 5 pages
+Added active nav link highlighting (JS DOM — `window.location.pathname`)
+Added scroll-to-top button (JS — `window.scroll`, `classList.toggle`)
+Added cookie consent banner with localStorage (JS)
+Added animated stats counter strip to index.html (JS `setInterval`)
+Added IntersectionObserver fade-in effect for service cards (JS)
+Implemented full client-side form validation on enquiry.html (JS regex)
+Implemented full client-side form validation on contact.html (JS regex)
+Integrated EmailJS SDK — both forms POST to liferestoration337@gmail.com
+Added dynamic card number field on enquiry.html (JS `addEventListener change`)
+Added Nedbank bank account details to enquiry.html inside `<details>` element
+Built image lightbox on services.html with prev/next/keyboard navigation (JS)
+Added SEO meta tags (description, keywords, robots, canonical) to all pages
+Added Open Graph meta tags to all pages
+Added JSON-LD structured data (Schema.org ChildCare) to index.html
+Created robots.txt
+Created sitemap.xml (all 5 pages)
+Added `aria-label` and `scope` attributes for accessibility
+Moved style.css into css/ subfolder (fixes broken stylesheet link)
+Fixed duplicate paragraph content in index.html
+Added embedded Google Maps `<iframe>` to contact.html (second location)
+Updated README.md with Part 3 details, changelog and references
+
+---
+
+## References
+
+EmailJS, 2024. EmailJS — Send Email Directly From JavaScript. [Online]. Available at: https://www.emailjs.com/docs/. [Accessed: 17 June 2026].
+
+Google Developers, 2026. Search Engine Optimisation (SEO) Starter Guide. [Online]. Available at: https://developers.google.com/search/docs/fundamentals/seo-starter-guide. [Accessed: 17 June 2026].
+
+Google Developers, 2026. Introduction to Structured Data. [Online]. Available at: https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data. [Accessed: 17 June 2026].
+
+MDN Web Docs, 2026. IntersectionObserver API. [Online]. Available at: https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API. [Accessed: 17 June 2026].
+
+MDN Web Docs, 2026. Client-side form validation. [Online]. Available at: https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation. [Accessed: 17 June 2026].
+
+MDN Web Docs, 2026. Using the Web Storage API. [Online]. Available at: https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API. [Accessed: 17 June 2026].
+
+Schema.org, n.d. ChildCare Schema. [Online]. Available at: https://schema.org/ChildCare. [Accessed: 17 June 2026].
+
+Sitemaps.org, n.d. Sitemaps XML format. [Online]. Available at: https://www.sitemaps.org/protocol.html. [Accessed: 17 June 2026].
+
+W3Schools, 2026. JavaScript HTML DOM. [Online]. Available at: https://www.w3schools.com/js/js_htmldom.asp. [Accessed: 17 June 2026].
+
