@@ -714,10 +714,7 @@ button[type="submit"]:hover {
 }
 
 
-/* ============================================================
-   PART 3 — JavaScript-driven CSS
-   Student: Justice Hove | ST10537282
-   ============================================================ */
+/*JavaScript-driven CSs */
 
 /* --- Active Nav Link --- */
 nav ul li a.active-nav {

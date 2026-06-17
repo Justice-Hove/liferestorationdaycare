@@ -86,6 +86,9 @@ Changed images from:
 index.html
 services.html
 
+===
+
+## Part 2
 21/05/2026
 v1.4
 Created a style.css file
@@ -148,33 +151,9 @@ Testing the website implemantation on multiple devices
 Attatching evidence of how the website looks on different gadgets
 Crosschecking the code and launching the website on different browsers
 
-# Responsive Design on different screens
-![](<Screenshot 2026-05-29 231003.png>)
-On the PC
+===
 
-![alt text](<Screenshot 2026-05-29 231117.png>)
-On a tablet
-
-![alt text](<Screenshot 2026-05-29 231141.png>)
-On a mobile device
-
-
-## References
-
-Afrihost, 2026. Domains. [Online]. Available at: https://www.afrihost.com/domains. [Accessed on 10 April 2026].
-
-ColorHunt, n.d. Color Palettes for Designers and Artists. [Online]. Available at: https://colorhunt.co. [Accessed on 28 April 2026].
-
-FreePik, n.d. Images. [Online]. Available at: https://www.freepik.com. [Accessed on 28 April 2026].
-
-Google Font, n.d. Free Fonts Library. [Online]. Available at: https://fonts.google.com. [Accessed on 9 April 2026].
-
-W3Schools, 2026 HTML Introduction. [Online]. Available at: https://www.w3schools.com/html/html_intro.asp [Accessed: 28 April 2026].
-
-Cssreference.io, n.d. CSS Reference: A free visual guide to CSS. . [Online]. Available at: https://cssreference.io.[Acessed on 23 May 2026].
-
-web.dev, 2026. Learn CSS. [online] Available at: <https://web.dev/learn/css> [Accessed 29 May 2026]
-## Part 3 Details
+## Part 3 details
 This is the third and final phase of the website development. The focus was on adding JavaScript functionality, implementing SEO best practices, building client-side form validation, integrating EmailJS for form submission, and deploying the site.
 
 ### What was implemented in Part 3:
@@ -201,52 +180,96 @@ This is the third and final phase of the website development. The focus was on a
 
 ---
 
-## Changelog
-
-17/06/2026
+## Changelog 
+14/06/2026
 v3.0
-Created `js/main.js` — external JavaScript file linked to all 5 pages
+Created `js/main.js` 
+ external JavaScript file linked to all 5 pages
 Added active nav link highlighting (JS DOM — `window.location.pathname`)
 Added scroll-to-top button (JS — `window.scroll`, `classList.toggle`)
-Added cookie consent banner with localStorage (JS)
 Added animated stats counter strip to index.html (JS `setInterval`)
-Added IntersectionObserver fade-in effect for service cards (JS)
+
+15/06/2026
+v3.1
+Added cookie consent banner with localStorage (JS)
+
+16/06/2026
+v3.2
 Implemented full client-side form validation on enquiry.html (JS regex)
 Implemented full client-side form validation on contact.html (JS regex)
+Integrated EmailJS SDK — both forms POST to liferestoration337@gmail.com
+Updated <head> on all pages
+
+17/06/2026
+v3.3
 Integrated EmailJS SDK — both forms POST to liferestoration337@gmail.com
 Added dynamic card number field on enquiry.html (JS `addEventListener change`)
 Added Nedbank bank account details to enquiry.html inside `<details>` element
 Built image lightbox on services.html with prev/next/keyboard navigation (JS)
+
+18/06/2026
+v3.4
 Added SEO meta tags (description, keywords, robots, canonical) to all pages
 Added Open Graph meta tags to all pages
 Added JSON-LD structured data (Schema.org ChildCare) to index.html
 Created robots.txt
 Created sitemap.xml (all 5 pages)
 Added `aria-label` and `scope` attributes for accessibility
-Moved style.css into css/ subfolder (fixes broken stylesheet link)
-Fixed duplicate paragraph content in index.html
+
+19/06/2026
+v3.5
 Added embedded Google Maps `<iframe>` to contact.html (second location)
 Updated README.md with Part 3 details, changelog and references
 
 ---
 
+# Responsive Design on different screens
+![](<Screenshot 2026-05-29 231003.png>)
+On the PC
+
+![alt text](<Screenshot 2026-05-29 231117.png>)
+On a tablet
+
+![alt text](<Screenshot 2026-05-29 231141.png>)
+On a mobile device
+
+
+---
+
 ## References
 
-EmailJS, 2024. EmailJS — Send Email Directly From JavaScript. [Online]. Available at: https://www.emailjs.com/docs/. [Accessed: 17 June 2026].
+Afrihost, 2026. Domains. [Online]. Available at: https://www.afrihost.com/domains. [Accessed on 10 April 2026].
+
+ColorHunt, n.d. Color Palettes for Designers and Artists. [Online]. Available at: https://colorhunt.co. [Accessed on 28 April 2026].
+
+EmailJS, 2024. EmailJS — Send Email Directly From JavaScript. [Online]. Available at: https://www.emailjs.com/docs/. [Accessed: 12 June 2026].
+
+FreePik, n.d. Images. [Online]. Available at: https://www.freepik.com. [Accessed on 28 April 2026].
 
 Google Developers, 2026. Search Engine Optimisation (SEO) Starter Guide. [Online]. Available at: https://developers.google.com/search/docs/fundamentals/seo-starter-guide. [Accessed: 17 June 2026].
 
-Google Developers, 2026. Introduction to Structured Data. [Online]. Available at: https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data. [Accessed: 17 June 2026].
+Google Developers, 2026. Introduction to Structured Data. [Online]. Available at: https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data. [Accessed: 15 June 2026].
+
+Google Font, n.d. Free Fonts Library. [Online]. Available at: https://fonts.google.com. [Accessed on 9 April 2026].
 
 MDN Web Docs, 2026. IntersectionObserver API. [Online]. Available at: https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API. [Accessed: 17 June 2026].
 
-MDN Web Docs, 2026. Client-side form validation. [Online]. Available at: https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation. [Accessed: 17 June 2026].
+MDN Web Docs, 2026. Client-side form validation. [Online]. Available at: https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation. [Accessed: 13 June 2026].
 
-MDN Web Docs, 2026. Using the Web Storage API. [Online]. Available at: https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API. [Accessed: 17 June 2026].
+MDN Web Docs, 2026. Using the Web Storage API. [Online]. Available at: https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API. [Accessed: 15 June 2026].
 
 Schema.org, n.d. ChildCare Schema. [Online]. Available at: https://schema.org/ChildCare. [Accessed: 17 June 2026].
 
 Sitemaps.org, n.d. Sitemaps XML format. [Online]. Available at: https://www.sitemaps.org/protocol.html. [Accessed: 17 June 2026].
 
-W3Schools, 2026. JavaScript HTML DOM. [Online]. Available at: https://www.w3schools.com/js/js_htmldom.asp. [Accessed: 17 June 2026].
+W3Schools, 2026. JavaScript HTML DOM. [Online]. Available at: https://www.w3schools.com/js/js_htmldom.asp. [Accessed: 14 June 2026].
+
+W3Schools, 2026 HTML Introduction. [Online]. Available at: https://www.w3schools.com/html/html_intro.asp [Accessed: 28 April 2026].
+
+Cssreference.io, n.d. CSS Reference: A free visual guide to CSS. . [Online]. Available at: https://cssreference.io.[Acessed on 23 May 2026].
+
+web.dev, 2026. Learn CSS. [online] Available at: <https://web.dev/learn/css> [Accessed 29 May 2026]
+
+---
+
 
