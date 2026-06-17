@@ -86,6 +86,9 @@ Changed images from:
 index.html
 services.html
 
+===
+
+## Part 2
 21/05/2026
 v1.4
 Created a style.css file
@@ -148,6 +151,36 @@ Testing the website implemantation on multiple devices
 Attatching evidence of how the website looks on different gadgets
 Crosschecking the code and launching the website on different browsers
 
+===
+
+## Part 3 details
+This is the third and final phase of the website development. The focus was on adding JavaScript functionality, implementing SEO best practices, building client-side form validation, integrating EmailJS for form submission, and deploying the site.
+
+### What was implemented in Part 3:
+- Created an external JavaScript file (`js/main.js`) and linked it to all five HTML pages.
+- Implemented active navigation link highlighting using `window.location.pathname`.
+- Built an animated statistics counter strip on the homepage using `setInterval`.
+- Added a scroll-to-top button (appears after 300px scroll) on all pages.
+- Implemented a cookie consent banner with `localStorage` persistence on all pages.
+- Added scroll-triggered fade-in animations using the `IntersectionObserver` API.
+- Built full JavaScript form validation for both `enquiry.html` and `contact.html`, including regex checks for email and phone number formats and inline error messages.
+- Integrated EmailJS to submit both forms to `liferestoration337@gmail.com` without a backend.
+- Added a dynamic donation card field on `enquiry.html` that appears only when "Donate / Sponsor" is selected.
+- Embedded the organisation's Nedbank bank account details (from official letter) inside an HTML `<details>` element on the enquiry page.
+- Implemented an image lightbox gallery on `services.html` with keyboard navigation support.
+- Added SEO meta tags (`description`, `keywords`, `robots`, `canonical`) to all pages.
+- Added Open Graph meta tags to all pages for social media preview.
+- Implemented JSON-LD structured data (Schema.org `ChildCare`) on the homepage for rich search results.
+- Created `robots.txt` to guide search engine crawlers.
+- Created `sitemap.xml` listing all five pages with priority and change frequency.
+- Added `aria-label` attributes and semantic improvements for accessibility.
+- Fixed duplicate paragraph content in `index.html` and `detailed-intro` section.
+- Moved `style.css` into the `css/` subfolder to match the path referenced in all HTML files.
+- Added a second location (embedded Google Map `<iframe>`) to `contact.html` to meet assignment requirements.
+
+---
+
+## Changelog 
 14/06/2026
 v3.0
 Created `js/main.js` 
@@ -188,6 +221,8 @@ v3.5
 Added embedded Google Maps `<iframe>` to contact.html (second location)
 Updated README.md with Part 3 details, changelog and references
 
+---
+
 # Responsive Design on different screens
 ![](<Screenshot 2026-05-29 231003.png>)
 On the PC
@@ -199,18 +234,42 @@ On a tablet
 On a mobile device
 
 
+---
+
 ## References
 
 Afrihost, 2026. Domains. [Online]. Available at: https://www.afrihost.com/domains. [Accessed on 10 April 2026].
 
 ColorHunt, n.d. Color Palettes for Designers and Artists. [Online]. Available at: https://colorhunt.co. [Accessed on 28 April 2026].
 
+EmailJS, 2024. EmailJS — Send Email Directly From JavaScript. [Online]. Available at: https://www.emailjs.com/docs/. [Accessed: 12 June 2026].
+
 FreePik, n.d. Images. [Online]. Available at: https://www.freepik.com. [Accessed on 28 April 2026].
 
+Google Developers, 2026. Search Engine Optimisation (SEO) Starter Guide. [Online]. Available at: https://developers.google.com/search/docs/fundamentals/seo-starter-guide. [Accessed: 17 June 2026].
+
+Google Developers, 2026. Introduction to Structured Data. [Online]. Available at: https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data. [Accessed: 15 June 2026].
+
 Google Font, n.d. Free Fonts Library. [Online]. Available at: https://fonts.google.com. [Accessed on 9 April 2026].
+
+MDN Web Docs, 2026. IntersectionObserver API. [Online]. Available at: https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API. [Accessed: 17 June 2026].
+
+MDN Web Docs, 2026. Client-side form validation. [Online]. Available at: https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation. [Accessed: 13 June 2026].
+
+MDN Web Docs, 2026. Using the Web Storage API. [Online]. Available at: https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API. [Accessed: 15 June 2026].
+
+Schema.org, n.d. ChildCare Schema. [Online]. Available at: https://schema.org/ChildCare. [Accessed: 17 June 2026].
+
+Sitemaps.org, n.d. Sitemaps XML format. [Online]. Available at: https://www.sitemaps.org/protocol.html. [Accessed: 17 June 2026].
+
+W3Schools, 2026. JavaScript HTML DOM. [Online]. Available at: https://www.w3schools.com/js/js_htmldom.asp. [Accessed: 14 June 2026].
 
 W3Schools, 2026 HTML Introduction. [Online]. Available at: https://www.w3schools.com/html/html_intro.asp [Accessed: 28 April 2026].
 
 Cssreference.io, n.d. CSS Reference: A free visual guide to CSS. . [Online]. Available at: https://cssreference.io.[Acessed on 23 May 2026].
 
 web.dev, 2026. Learn CSS. [online] Available at: <https://web.dev/learn/css> [Accessed 29 May 2026]
+
+---
+
+
