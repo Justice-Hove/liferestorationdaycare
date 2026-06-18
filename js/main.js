@@ -1,3 +1,8 @@
+var EMAILJS_SERVICE_ID       = 'service_qorbx6c';   
+var EMAILJS_TEMPLATE_ENQUIRY = 'template_mxb1msq';  
+var EMAILJS_TEMPLATE_CONTACT = 'template_r5sczkl';  
+
+
 /* ACTIVE NAV LINK — highlight current page in navigation*/
 document.addEventListener('DOMContentLoaded', function () {
 
@@ -143,11 +148,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 purpose: document.getElementById('purpose').value,
                 card_number: document.getElementById('card') ? document.getElementById('card').value.trim() : 'N/A',
                 message: document.getElementById('enquiry_text').value.trim(),
-                to_email: 'liferestoration337@gmail.com'
+                to_email: 'hovejah@gmail.com'
             };
 
             // EmailJS send
-            emailjs.send('service_liferestoration', 'template_enquiry', formData)
+            emailjs.send('service_qorbx6c', 'template_mxb1msq', formData)
                 .then(function () {
                     showFormMessage(enquiryForm, 'success', '✅ Thank you! Your enquiry has been sent successfully. We will be in touch shortly.');
                     enquiryForm.reset();
@@ -185,13 +190,13 @@ document.addEventListener('DOMContentLoaded', function () {
                     purpose: 'DONATION',
                     card_number: cardValue,
                     message: document.getElementById('enquiry_text').value.trim(),
-                    to_email: 'liferestoration337@gmail.com'
+                    to_email: 'hovejah@gmail.com'
                 };
 
                 donateBtn.textContent = 'Processing…';
                 donateBtn.disabled = true;
 
-                emailjs.send('service_liferestoration', 'template_enquiry', donateData)
+                emailjs.send('service_qorbx6c', 'template_r5sczkl', donateData)
                     .then(function () {
                         showFormMessage(enquiryForm, 'success', '💚 Thank you for your generous donation! We will process your payment and contact you shortly.');
                         enquiryForm.reset();
@@ -226,17 +231,17 @@ document.addEventListener('DOMContentLoaded', function () {
                 from_email: document.getElementById('contactEmail').value.trim(),
                 message_type: document.getElementById('messageType').value,
                 message: document.getElementById('fullMessage').value.trim(),
-                to_email: 'liferestoration337@gmail.com'
+                to_email: 'hovejah@gmail.com'
             };
 
-            emailjs.send('service_liferestoration', 'template_contact', contactData)
+            emailjs.send('service_qorbx6c', 'template_r5sczkl', contactData)
                 .then(function () {
                     showFormMessage(contactForm, 'success', '✅ Message sent! We will respond within 1–2 business days.');
                     contactForm.reset();
                 })
                 .catch(function (error) {
                     console.error('EmailJS error:', error);
-                    showFormMessage(contactForm, 'error', '❌ Message failed to send. Please email us at liferestoration337@gmail.com');
+                    showFormMessage(contactForm, 'error', '❌ Message failed to send. Please email us at hovejah@gmail.com');
                 })
                 .finally(function () {
                     if (submitBtn) {

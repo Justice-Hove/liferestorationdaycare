@@ -221,6 +221,10 @@ v3.5
 Added embedded Google Maps `<iframe>` to contact.html (second location)
 Updated README.md with Part 3 details, changelog and references
 
+Fixed form submission failure on enquiry.html and contact.html
+Root cause: EmailJS placeholder credentials replaced with real account credentials
+Centralised EmailJS Service ID and Template IDs at the top of js/main.js for easy maintenance
+Updated EMAILJS_PUBLIC_KEY in all 5 HTML pages with real EmailJS public key
 ---
 
 # Responsive Design on different screens
